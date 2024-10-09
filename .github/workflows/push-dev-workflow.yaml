@@ -7,4 +7,5 @@ on:
 
 jobs:
   sonarqube:
+    secrets: inherit
     uses: ./.github/workflows/sonarqube-workflow.yaml
