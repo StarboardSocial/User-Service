@@ -12,8 +12,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1f94560a-d4bd-45af-b071-aaf3ab8ec558" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.github/workflows/upload-to-registry.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.StarboardSocial.UserService/.idea/indexLayout.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.StarboardSocial.UserService/.idea/projectSettingsUpdater.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.StarboardSocial.UserService/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StarboardSocial.UserService.Data/Database/StarboardDbContext.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StarboardSocial.UserService.Data/Mappers/ProfileMapper.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StarboardSocial.UserService.Data/Migrations/20241012190712_InitialMigration.Designer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StarboardSocial.UserService.Data/Migrations/20241012190712_InitialMigration.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StarboardSocial.UserService.Data/Migrations/StarboardDbContextModelSnapshot.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StarboardSocial.UserService.Data/Models/ProfileDto.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StarboardSocial.UserService.Data/Repositories/ProfileRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StarboardSocial.UserService.Data/Repositories/RegistrationRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StarboardSocial.UserService.Domain/DataInterfaces/IProfileRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StarboardSocial.UserService.Domain/DataInterfaces/IRegistrationRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StarboardSocial.UserService.Domain/Models/Profile.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StarboardSocial.UserService.Domain/Services/ProfileService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StarboardSocial.UserService.Domain/Services/RegistrationService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StarboardSocial.UserService.Server/Controllers/ProfileController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StarboardSocial.UserService.Server/Controllers/RegistrationController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StarboardSocial.UserService.Server/Helpers/UserIdHelper.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StarboardSocial.UserService.Server/Mappers/ProfileMapper.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StarboardSocial.UserService.Server/Models/ProfileCreationModel.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StarboardSocial.UserService.Server/Models/ProfileReturnModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.StarboardSocial.UserService/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.StarboardSocial.UserService/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/StarboardSocial.UserService.Data/StarboardSocial.UserService.Data.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/StarboardSocial.UserService.Data/StarboardSocial.UserService.Data.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StarboardSocial.UserService.Domain/StarboardSocial.UserService.Domain.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/StarboardSocial.UserService.Domain/StarboardSocial.UserService.Domain.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/StarboardSocial.UserService.Server/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/StarboardSocial.UserService.Server/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StarboardSocial.UserService.Server/Properties/launchSettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/StarboardSocial.UserService.Server/Properties/launchSettings.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/StarboardSocial.UserService.Server/StarboardSocial.UserService.Server.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/StarboardSocial.UserService.Server/StarboardSocial.UserService.Server.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/StarboardSocial.UserService.Server/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/StarboardSocial.UserService.Server/appsettings.json" afterDir="false" />
     </list>
@@ -22,15 +48,18 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DpaMonitoringSettings">
+    <option name="autoShow" value="false" />
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 3
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
   <component name="ProjectId" id="2nD5BdyEk8cAYT2b78FleWZMtHF" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -39,30 +68,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    ".NET Launch Settings Profile.StarboardSocial.UserService.Server: http.executor": "Run",
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "development",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
-  },
-  "keyToStringList": {
-    "rider.external.source.directories": [
-      "/Users/josian/Library/Application Support/JetBrains/Rider2023.3/resharper-host/DecompilerCache",
-      "/Users/josian/Library/Application Support/JetBrains/Rider2023.3/resharper-host/SourcesCache",
-      "/Users/josian/.local/share/Symbols/src"
-    ]
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;.NET Launch Settings Profile.StarboardSocial.UserService.Server: http.executor&quot;: &quot;Run&quot;,
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;development&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected=".NET Launch Settings Profile.StarboardSocial.UserService.Server: http">
     <configuration name="StarboardSocial.UserService.Data" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
@@ -176,7 +198,10 @@
       <method v="2" />
     </configuration>
     <configuration default="true" type="docker-deploy" factoryName="dockerfile" temporary="true">
-      <deployment type="dockerfile" />
+      <deployment type="dockerfile">
+        <settings />
+      </deployment>
+      <EXTENSION ID="com.jetbrains.rider.docker.debug" isFastModeEnabled="true" isSslEnabled="false" />
       <method v="2" />
     </configuration>
     <list>
@@ -197,15 +222,66 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1728494672310</updated>
-      <workItem from="1728494673665" duration="3481000" />
+      <workItem from="1728494673665" duration="7886000" />
+      <workItem from="1728547290753" duration="9586000" />
+      <workItem from="1728649492526" duration="8023000" />
+      <workItem from="1729064428649" duration="2157000" />
+      <workItem from="1729077994917" duration="4916000" />
+      <workItem from="1729260238425" duration="2876000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/StarboardSocial.UserService.Server/Controllers/RegistrationController.cs</url>
+          <line>27</line>
+          <properties documentPath="$PROJECT_DIR$/StarboardSocial.UserService.Server/Controllers/RegistrationController.cs" containingFunctionPresentation="Method 'Register'">
+            <startOffsets>
+              <option value="1117" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1118" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/StarboardSocial.UserService.Server/Mappers/ProfileMapper.cs</url>
+          <line>9</line>
+          <properties documentPath="$PROJECT_DIR$/StarboardSocial.UserService.Server/Mappers/ProfileMapper.cs" containingFunctionPresentation="Method 'ProfileCreationModelToProfile'">
+            <startOffsets>
+              <option value="311" />
+            </startOffsets>
+            <endOffsets>
+              <option value="539" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/StarboardSocial.UserService.Server/Helpers/UserIdHelper.cs</url>
+          <line>9</line>
+          <properties documentPath="$PROJECT_DIR$/StarboardSocial.UserService.Server/Helpers/UserIdHelper.cs" containingFunctionPresentation="Method 'GetUserId'">
+            <startOffsets>
+              <option value="234" />
+            </startOffsets>
+            <endOffsets>
+              <option value="294" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
