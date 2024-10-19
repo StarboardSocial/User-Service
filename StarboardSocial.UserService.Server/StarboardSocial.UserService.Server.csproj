@@ -26,12 +26,6 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Content Include="..\.dockerignore">
-        <Link>.dockerignore</Link>
-      </Content>
-    </ItemGroup>
-
-    <ItemGroup>
       <ProjectReference Include="..\StarboardSocial.UserService.Data\StarboardSocial.UserService.Data.csproj" />
       <ProjectReference Include="..\StarboardSocial.UserService.Domain\StarboardSocial.UserService.Domain.csproj" />
     </ItemGroup>
