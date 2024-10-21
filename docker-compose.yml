@@ -1,5 +1,3 @@
-version: "3.5"
-
 services:
   userservice:
     image: registry.starboardsocial.nl/userservice:prod
@@ -9,6 +7,7 @@ services:
       - userservice_db
     networks:
       - starboardsocial_net
+      - user_starboardsocial_net
     environment:
       Rabbit__UserName: ${RABBIT_USERNAME}
       Rabbit__Password: ${RABBIT_PASSWORD}
@@ -22,7 +21,7 @@ services:
     container_name: 'StarboardSocial-UserService-DB'
     restart: unless-stopped
     networks:
-      - starboardsocial_net
+      - user_starboardsocial_net
     environment:
       MYSQL_ROOT_PASSWORD: ${USER_SQL_PASSWORD}
       MYSQL_USER: ${USER_SQL_USERNAME}
@@ -38,4 +37,7 @@ volumes:
 networks:
   starboardsocial_net:
     name: starboardsocial_net
+    driver: bridge
+  user_starboardsocial_net:
+    name: user_starboardsocial_net
     driver: bridge

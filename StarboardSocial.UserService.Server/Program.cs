@@ -45,7 +45,6 @@ builder.Services.AddSingleton(channel);
 // DB Context
 builder.Services.AddDbContext<StarboardDbContext>(optionsBuilder => optionsBuilder.UseMySQL(builder.Configuration.GetConnectionString("MySql")!));
 
-
 // Services
 builder.Services.AddTransient<IRegistrationService, RegistrationService>();
 builder.Services.AddTransient<IRegistrationRepository, RegistrationRepository>();
@@ -60,6 +59,12 @@ if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
+}
+
+using (var serviceScope = app.Services.CreateScope())
+{
+    var context = serviceScope.ServiceProvider.GetRequiredService<StarboardDbContext>();
+    context.Database.Migrate();
 }
 
 app.UsePathBase("/user");
