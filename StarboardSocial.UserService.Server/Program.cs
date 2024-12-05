@@ -28,20 +28,27 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     .AddJwtBearer();
 
 // RabbitMQ Config
-ConnectionFactory factory = new()
+try
 {
-    UserName = builder.Configuration["Rabbit:UserName"]!,
-    Password = builder.Configuration["Rabbit:Password"]!,
-    VirtualHost = builder.Configuration["Rabbit:VirtualHost"]!,
-    HostName = builder.Configuration["Rabbit:HostName"]!,
-    Port = int.Parse(builder.Configuration["Rabbit:Port"]!)
-};
+    ConnectionFactory factory = new()
+    {
+        UserName = builder.Configuration["Rabbit:UserName"]!,
+        Password = builder.Configuration["Rabbit:Password"]!,
+        VirtualHost = builder.Configuration["Rabbit:VirtualHost"]!,
+        HostName = builder.Configuration["Rabbit:HostName"]!,
+        Port = int.Parse(builder.Configuration["Rabbit:Port"]!)
+    };
 
-IConnection conn = await factory.CreateConnectionAsync();
-IChannel channel = await conn.CreateChannelAsync();
+    IConnection conn = await factory.CreateConnectionAsync();
+    IChannel channel = await conn.CreateChannelAsync();
 
-builder.Services.AddSingleton(channel);
-
+    builder.Services.AddSingleton(channel);
+} catch (Exception e)
+{
+    Console.WriteLine("Error connecting to RabbitMQ");
+    Console.WriteLine(e.Message);
+}
+Console.WriteLine(builder.Configuration.GetConnectionString("MySql")!);
 // DB Context
 builder.Services.AddDbContext<StarboardDbContext>(optionsBuilder => optionsBuilder.UseMySQL(builder.Configuration.GetConnectionString("MySql")!));
 
