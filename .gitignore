@@ -481,3 +481,5 @@ FodyWeavers.xsd
 # JetBrains Rider
 *.sln.iml
 StarboardSocial.UserService.Server/appsettings.Development.json
+
+kubernetes/userservice-config.yaml

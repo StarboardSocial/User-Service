@@ -1,0 +1,54 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name:  userservice-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: userservice
+  template:
+    metadata:
+      labels:
+        app: userservice
+    spec:
+      volumes:
+        - name: userservice-db-ps
+          persistentVolumeClaim:
+            claimName: userservice-db-volumeclaim
+      containers:
+        - image:  registry.starboardsocial.nl/userservice:prod
+          imagePullPolicy: Always
+          name:  userservice
+          # resources:
+          #   requests:
+          #     memory: "64Mi"
+          #     cpu: "100m"
+          #   limits:
+          #     memory: "128Mi"
+          #     cpu: "200m"
+          ports:
+            - containerPort: 9001
+          envFrom:
+            - configMapRef:
+                name: userservice-config
+
+        - image: mysql:latest
+          name:  userservice-database
+          # resources:
+          #   requests:
+          #     memory: "64Mi"
+          #     cpu: "100m"
+          #   limits:
+          #     memory: "500Mi"
+          #     cpu: "500m"
+          volumeMounts:
+            - name: userservice-db-ps
+              mountPath: /var/lib/mysql
+          ports:
+            - containerPort: 3306
+          envFrom:
+            - configMapRef:
+                name: userservice-config
+      imagePullSecrets:
+        - name: starboard-registry
