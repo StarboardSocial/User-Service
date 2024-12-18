@@ -14,4 +14,4 @@ jobs:
   deploy:
     secrets: inherit
     needs: build_upload_image
-    uses: ./.github/workflows/deploy-ira.yaml
+    uses: ./.github/workflows/deploy-ira-kube.yaml
