@@ -59,7 +59,11 @@ builder.Services.AddTransient<IRegistrationRepository, RegistrationRepository>()
 builder.Services.AddTransient<IProfileService, ProfileService>();
 builder.Services.AddTransient<IProfileRepository, ProfileRepository>();
 
+builder.Services.AddHealthChecks();
+
 var app = builder.Build();
+
+app.MapHealthChecks("/health");
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

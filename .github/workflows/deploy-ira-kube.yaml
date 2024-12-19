@@ -60,4 +60,5 @@ jobs:
             cd userservice/kubernetes &&
             kubectl create configmap userservice-config --from-env-file=config.env -n starboardsocial --dry-run=client -o yaml | kubectl apply -n starboardsocial -f - &&
             kubectl apply -f . -n starboardsocial &&
+            kubectl rollout restart deployment/userservice-deployment -n starboardsocial &&
             rm config.env
