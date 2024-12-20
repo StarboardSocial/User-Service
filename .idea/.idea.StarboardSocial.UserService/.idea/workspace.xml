@@ -12,8 +12,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1f94560a-d4bd-45af-b071-aaf3ab8ec558" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StarboardSocial.UserService.Data/Repositories/DataDeletionRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StarboardSocial.UserService.Domain/DataInterfaces/IDataDeletionRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StarboardSocial.UserService.Domain/Services/DataDeletionConsumer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StarboardSocial.UserService.Domain/Services/DataDeletionHandler.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StarboardSocial.UserService.Domain/Services/DataDeletionListener.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StarboardSocial.UserService.Domain/Services/DataDeletionService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StarboardSocial.UserService.Server/Controllers/DataDeletionController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.StarboardSocial.UserService/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.StarboardSocial.UserService/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StarboardSocial.UserService.Data/StarboardSocial.UserService.Data.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/StarboardSocial.UserService.Data/StarboardSocial.UserService.Data.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StarboardSocial.UserService.Domain/StarboardSocial.UserService.Domain.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/StarboardSocial.UserService.Domain/StarboardSocial.UserService.Domain.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StarboardSocial.UserService.Server/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/StarboardSocial.UserService.Server/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StarboardSocial.UserService.Server/StarboardSocial.UserService.Server.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/StarboardSocial.UserService.Server/StarboardSocial.UserService.Server.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,11 +31,18 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="DpaMonitoringSettings">
-    <option name="autoShow" value="false" />
+    <option name="firstShow" value="false" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/bf9021a960b74107a7e141aa06bc9d8a0a53c929178c2fb95b1597be8af8dc/ExceptionDispatchInfo.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="KubernetesApiPersistence"><![CDATA[{}]]></component>
+  <component name="KubernetesApiProvider"><![CDATA[{
+  "isMigrated": true
+}]]></component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -48,7 +65,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "feature/rabbit",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -218,19 +235,6 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/StarboardSocial.UserService.Server/Controllers/RegistrationController.cs</url>
-          <line>27</line>
-          <properties documentPath="$PROJECT_DIR$/StarboardSocial.UserService.Server/Controllers/RegistrationController.cs" containingFunctionPresentation="Method 'Register'">
-            <startOffsets>
-              <option value="1117" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1118" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/StarboardSocial.UserService.Server/Mappers/ProfileMapper.cs</url>
           <line>9</line>

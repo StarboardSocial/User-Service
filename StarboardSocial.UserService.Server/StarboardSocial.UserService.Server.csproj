@@ -18,10 +18,11 @@
           <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
         </PackageReference>
         <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="8.0.10" />
+        <PackageReference Include="Microsoft.Extensions.Hosting" Version="9.0.0" />
         <PackageReference Include="MySql.Data.EntityFramework" Version="9.0.0" />
         <PackageReference Include="MySql.EntityFrameworkCore" Version="8.0.5" />
         <PackageReference Include="MySqlConnector" Version="2.3.7" />
-        <PackageReference Include="RabbitMQ.Client" Version="7.0.0-rc.12" />
+        <PackageReference Include="RabbitMQ.Client" Version="7.0.0" />
         <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0"/>
     </ItemGroup>
 

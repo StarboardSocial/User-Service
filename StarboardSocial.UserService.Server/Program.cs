@@ -48,9 +48,15 @@ try
     Console.WriteLine("Error connecting to RabbitMQ");
     Console.WriteLine(e.Message);
 }
-Console.WriteLine(builder.Configuration.GetConnectionString("MySql")!);
+
 // DB Context
 builder.Services.AddDbContext<StarboardDbContext>(optionsBuilder => optionsBuilder.UseMySQL(builder.Configuration.GetConnectionString("MySql")!));
+
+builder.Services.AddSingleton<DataDeletionConsumer>();
+builder.Services.AddHostedService<DataDeletionListener>();
+
+// Application services
+builder.Services.AddTransient<DataDeletionHandler>();
 
 // Services
 builder.Services.AddTransient<IRegistrationService, RegistrationService>();
@@ -58,6 +64,11 @@ builder.Services.AddTransient<IRegistrationRepository, RegistrationRepository>()
 
 builder.Services.AddTransient<IProfileService, ProfileService>();
 builder.Services.AddTransient<IProfileRepository, ProfileRepository>();
+
+builder.Services.AddTransient<IDataDeletionService, DataDeletionService>();
+builder.Services.AddTransient<IDataDeletionRepository, DataDeletionRepository>();
+
+
 
 builder.Services.AddHealthChecks();
 
