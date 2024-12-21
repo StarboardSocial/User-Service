@@ -52,22 +52,21 @@ try
 // DB Context
 builder.Services.AddDbContext<StarboardDbContext>(optionsBuilder => optionsBuilder.UseMySQL(builder.Configuration.GetConnectionString("MySql")!));
 
-builder.Services.AddSingleton<DataDeletionConsumer>();
+builder.Services.AddScoped<DataDeletionConsumer>();
 builder.Services.AddHostedService<DataDeletionListener>();
 
 // Application services
-builder.Services.AddTransient<DataDeletionHandler>();
+builder.Services.AddScoped<DataDeletionHandler>();
 
 // Services
-builder.Services.AddTransient<IRegistrationService, RegistrationService>();
-builder.Services.AddTransient<IRegistrationRepository, RegistrationRepository>();
+builder.Services.AddScoped<IRegistrationService, RegistrationService>();
+builder.Services.AddScoped<IRegistrationRepository, RegistrationRepository>();
 
-builder.Services.AddTransient<IProfileService, ProfileService>();
-builder.Services.AddTransient<IProfileRepository, ProfileRepository>();
+builder.Services.AddScoped<IProfileService, ProfileService>();
+builder.Services.AddScoped<IProfileRepository, ProfileRepository>();
 
-builder.Services.AddTransient<IDataDeletionService, DataDeletionService>();
-builder.Services.AddTransient<IDataDeletionRepository, DataDeletionRepository>();
-
+builder.Services.AddScoped<IDataDeletionRepository, DataDeletionRepository>();
+builder.Services.AddScoped<IDataDeletionService, DataDeletionService>();
 
 
 builder.Services.AddHealthChecks();
@@ -83,9 +82,9 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-using (var serviceScope = app.Services.CreateScope())
+using (IServiceScope serviceScope = app.Services.CreateScope())
 {
-    var context = serviceScope.ServiceProvider.GetRequiredService<StarboardDbContext>();
+    StarboardDbContext context = serviceScope.ServiceProvider.GetRequiredService<StarboardDbContext>();
     context.Database.Migrate();
 }
 

@@ -34,8 +34,9 @@ public class DataDeletionConsumer(IChannel channel, IDataDeletionService dataDel
             string routingKey = ea.RoutingKey;
             Console.WriteLine($" [x] Received '{routingKey}':'{message}'");
             await onMessageReceived(message);
+            await _channel.BasicAckAsync(ea.DeliveryTag, multiple: false);
         };
 
-        await _channel.BasicConsumeAsync(queueName, autoAck: true, consumer: consumer);
+        await _channel.BasicConsumeAsync(queueName, autoAck: false, consumer: consumer);
     }
 }

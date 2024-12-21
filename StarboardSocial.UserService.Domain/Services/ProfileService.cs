@@ -12,8 +12,5 @@ public interface IProfileService
 public class ProfileService(IProfileRepository profileRepository) : IProfileService
 {
     private readonly IProfileRepository _profileRepository = profileRepository;
-    public async Task<Result<Profile>> GetProfile(string userId)
-    {
-        return await _profileRepository.GetProfile(userId);
-    }
+    public async Task<Result<Profile>> GetProfile(string userId) => await _profileRepository.GetProfile(userId);
 }

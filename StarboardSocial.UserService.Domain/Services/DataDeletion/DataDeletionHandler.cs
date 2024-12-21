@@ -8,6 +8,6 @@ public class DataDeletionHandler(IDataDeletionService dataDeletionService)
 
     public async Task Handle(string userId)
     {
-        await _dataDeletionService.RequestDataDeletion(userId);
+        await _dataDeletionService.DeleteUserData(userId);
     }
 }

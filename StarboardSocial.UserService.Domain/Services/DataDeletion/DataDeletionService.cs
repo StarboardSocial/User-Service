@@ -14,13 +14,8 @@ public class DataDeletionService(IDataDeletionRepository dataDeletionRepository)
 {
     private readonly IDataDeletionRepository _dataDeletionRepository = dataDeletionRepository;
 
-    public async Task<Result> RequestDataDeletion(string userId)
-    {
-        return await _dataDeletionRepository.RequestDataDeletion(userId);
-    }
+    public async Task<Result> RequestDataDeletion(string userId) => await _dataDeletionRepository.RequestDataDeletion(userId);
     
-    public async Task<Result> DeleteUserData(string userId)
-    {
-        return await _dataDeletionRepository.DeleteUserData(userId);
-    }
+    public async Task<Result> DeleteUserData(string userId) => await _dataDeletionRepository.DeleteUserData(userId);
+    
 }
