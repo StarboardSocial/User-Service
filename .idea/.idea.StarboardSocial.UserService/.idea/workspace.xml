@@ -11,9 +11,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1f94560a-d4bd-45af-b071-aaf3ab8ec558" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.StarboardSocial.UserService/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.StarboardSocial.UserService/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="1f94560a-d4bd-45af-b071-aaf3ab8ec558" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -212,6 +210,7 @@
       <workItem from="1733408890488" duration="1244000" />
       <workItem from="1734961296044" duration="7446000" />
       <workItem from="1734982257664" duration="610000" />
+      <workItem from="1734990483880" duration="271000" />
     </task>
     <servers />
   </component>
