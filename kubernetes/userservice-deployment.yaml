@@ -22,10 +22,10 @@ spec:
           name:  userservice
           resources:
             requests:
-              memory: "100Mi"
+              memory: "200Mi"
               cpu: "100m"
             limits:
-              memory: "200Mi"
+              memory: "400Mi"
               cpu: "200m"
           ports:
             - containerPort: 9001
@@ -37,10 +37,10 @@ spec:
           name:  userservice-database
           resources:
             requests:
-              memory: "500Mi"
+              memory: "600"
               cpu: "100m"
             limits:
-              memory: "1000Mi"
+              memory: "1200Mi"
               cpu: "200m"
           volumeMounts:
             - name: userservice-db-ps
